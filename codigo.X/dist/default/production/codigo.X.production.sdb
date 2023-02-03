@@ -17,7 +17,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"11 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\funtions_magic.c
+"11 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\funtions_magic.c
 [v _BinTOBcd BinTOBcd `(*.4i  1 e 1 0 ]
 "25
 [v _seg7 seg7 `(*.4i  1 e 1 0 ]
@@ -35,9 +35,9 @@
 [v _UART_print UART_print `(v  1 e 1 0 ]
 "138
 [v _ASCII_Con ASCII_Con `(*.4uc  1 e 1 0 ]
-"4 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\init_IO.c
+"4 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\init_IO.c
 [v _init_IO init_IO `(v  1 e 1 0 ]
-"15 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\newmain.c
+"15 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\newmain.c
 [v _main main `(v  1 e 1 0 ]
 [s S390 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
@@ -226,7 +226,7 @@
 "3453
 [u S217 . 1 `S208 1 . 1 0 ]
 [v _BAUDCONbits BAUDCONbits `VES217  1 e 1 @415 ]
-"15 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\newmain.c
+"15 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\newmain.c
 [v _main main `(v  1 e 1 0 ]
 {
 "20
@@ -237,7 +237,7 @@
 [v main@A A `*.4i  1 a 1 40 ]
 "30
 } 0
-"67 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\funtions_magic.c
+"67 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\funtions_magic.c
 [v _showNumbers showNumbers `(v  1 e 1 0 ]
 {
 [v showNumbers@digits digits `*.4i  1 a 1 wreg ]
@@ -275,12 +275,12 @@
 [v readADC@r r `l  1 a 4 9 ]
 "104
 } 0
-"4 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\init_IO.c
+"4 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\init_IO.c
 [v _init_IO init_IO `(v  1 e 1 0 ]
 {
 "69
 } 0
-"107 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\funtions_magic.c
+"107 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\funtions_magic.c
 [v _init_UART init_UART `(v  1 e 1 0 ]
 {
 "121
@@ -344,7 +344,7 @@
 [v ___aldiv@dividend dividend `l  1 p 4 4 ]
 "41
 } 0
-"138 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\codigo.X\funtions_magic.c
+"138 C:\Users\rrtc2\OneDrive\Escritorio\2301\Proyecto 2\Practica 1\Produccion\Codes\codigo.X\funtions_magic.c
 [v _ASCII_Con ASCII_Con `(*.4uc  1 e 1 0 ]
 {
 [v ASCII_Con@a a `i  1 p 2 0 ]

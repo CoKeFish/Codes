@@ -4367,7 +4367,7 @@ long readADC();
 void init_UART();
 void UART_write(char c);
 void UART_print(unsigned char* cadena);
-char* ASCII_Con(int a, int b, int c);
+unsigned char* ASCII_Con(int a, int b, int c);
 # 4 "funtions_magic.c" 2
 
 
@@ -4503,7 +4503,7 @@ void UART_print(unsigned char* cadena)
     }
 }
 
-char* ASCII_Con(int a, int b, int c)
+unsigned char* ASCII_Con(int a, int b, int c)
 {
     static char r[7];
     r[0] = a+48;

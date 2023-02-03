@@ -24,8 +24,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./funtions_magic.h: 9: void UART_print(unsigned char* cadena);
 [v _UART_print `(v ~T0 @X0 0 ef1`*uc ]
 "10
-[; ;./funtions_magic.h: 10: char* ASCII_Con(int a, int b, int c);
-[; ;./funtions_magic.h: 10: char* ASCII_Con(int a, int b, int c);
+[; ;./funtions_magic.h: 10: unsigned char* ASCII_Con(int a, int b, int c);
+[; ;./funtions_magic.h: 10: unsigned char* ASCII_Con(int a, int b, int c);
 [v _ASCII_Con `(*uc ~T0 @X0 0 ef3`i`i`i ]
 "55 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
@@ -594,7 +594,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _showNumbers (1 _A ]
 "25
 [; ;newmain.c: 25:         UART_print(ASCII_Con(B[2], B[1], B[0]));
-[e ( _UART_print (1 -> ( _ASCII_Con (3 , , *U + _B * -> -> 2 `i `x -> -> # *U _B `i `x *U + _B * -> -> 1 `i `x -> -> # *U _B `i `x *U + _B * -> -> 0 `i `x -> -> # *U _B `i `x `*uc ]
+[e ( _UART_print (1 ( _ASCII_Con (3 , , *U + _B * -> -> 2 `i `x -> -> # *U _B `i `x *U + _B * -> -> 1 `i `x -> -> # *U _B `i `x *U + _B * -> -> 0 `i `x -> -> # *U _B `i `x ]
 "27
 [; ;newmain.c: 27:     }
 }

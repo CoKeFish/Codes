@@ -942,14 +942,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 367 ]
 }
 "138
-[; ;funtions_magic.c: 138: char* ASCII_Con(int a, int b, int c)
+[; ;funtions_magic.c: 138: unsigned char* ASCII_Con(int a, int b, int c)
 [v _ASCII_Con `(*uc ~T0 @X0 1 ef3`i`i`i ]
 "139
 [; ;funtions_magic.c: 139: {
 {
 [e :U _ASCII_Con ]
 "138
-[; ;funtions_magic.c: 138: char* ASCII_Con(int a, int b, int c)
+[; ;funtions_magic.c: 138: unsigned char* ASCII_Con(int a, int b, int c)
 [v _a `i ~T0 @X0 1 r1 ]
 [v _b `i ~T0 @X0 1 r2 ]
 [v _c `i ~T0 @X0 1 r3 ]
@@ -982,7 +982,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + &U F2521 * -> -> -> 6 `i `ui `ux -> -> # *U &U F2521 `ui `ux -> -> 0 `ui `uc ]
 "149
 [; ;funtions_magic.c: 149:     return r;
-[e ) &U F2521 ]
+[e ) -> &U F2521 `*uc ]
 [e $UE 371  ]
 "150
 [; ;funtions_magic.c: 150: }

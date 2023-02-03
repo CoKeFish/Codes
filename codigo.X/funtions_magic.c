@@ -135,7 +135,7 @@ void UART_print(unsigned char* cadena)
     }
 }
 
-char* ASCII_Con(int a, int b, int c)
+unsigned char* ASCII_Con(int a, int b, int c)
 {
     static char r[7];
     r[0] = a+48;

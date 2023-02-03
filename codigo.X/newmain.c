@@ -28,6 +28,25 @@ void main(void) {
     
     return;
 }
+/*
+void __interrupt() ISR_TIMER0(void){
+    
+    if(INTCONbits.TMR0IF == 1){
+        
+        LATBbits.LATB1 = ! LATBbits.LATB1; 
+         TMR0L = 255;
+        INTCONbits.TMR0IF = 0;
+    }
+    
+}
 
-
-
+void TMR0_temporizador(void){
+     
+     OPTION_REGbits.TMR0CS = 0;          //Modo Temporizador
+     OPTION_REGbits.PSA = 0;             //Prescaler habilitado
+     OPTION_REGbits.PS = 0b111;          //Prescaler 1:256   
+   
+     TMR0 = 0;
+     T0CONbits.TMR0ON = 1; //Enciende TMR0   
+}
+*/

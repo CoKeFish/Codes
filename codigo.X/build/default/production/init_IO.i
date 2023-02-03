@@ -4370,7 +4370,7 @@ long readADC();
 void init_UART();
 void UART_write(char c);
 void UART_print(unsigned char* cadena);
-char* ASCII_Con(int a, int b, int c);
+unsigned char* ASCII_Con(int a, int b, int c);
 # 5 "./init_IO.h" 2
 
 

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Wed Feb 01 01:11:54 2023
+                                                                                               Fri Feb 03 01:44:36 2023
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	16F1827
@@ -2969,8 +2969,9 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2948                           ; Regs used in _ASCII_Con: [wreg+status,2+status,0]
   2949                           
   2950                           
-  2951                           ;funtions_magic.c: 138: char* ASCII_Con(int a, int b, int c);funtions_magic.c: 139: {;fu
-      +                          ntions_magic.c: 140:     static char r[7];;funtions_magic.c: 141:     r[0] = a+48;
+  2951                           ;funtions_magic.c: 138: unsigned char* ASCII_Con(int a, int b, int c);funtions_magic.c: 
+      +                          139: {;funtions_magic.c: 140:     static char r[7];;funtions_magic.c: 141:     r[0] = a+
+      +                          48;
   2952     03FC  0870               	movf	ASCII_Con@a,w
   2953     03FD  3E30               	addlw	48
   2954     03FE  0020               	movlb	0	; select bank0
@@ -3328,7 +3329,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Wed Feb 01 01:11:54 2023
+Symbol Table                                                                                   Fri Feb 03 01:44:36 2023
 
                      l19 0547                       l60 04CB                       l53 07E8  
                      l63 0506                       l72 0463                       l81 03EE  
