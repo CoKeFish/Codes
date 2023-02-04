@@ -3,30 +3,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7 ./init_IO.h
 [; ;./init_IO.h: 7: void init_IO();
 [v _init_IO `(v ~T0 @X0 0 e? ]
-"6 ./funtions_magic.h
-[; ;./funtions_magic.h: 6: long readADC();
-[; ;./funtions_magic.h: 6: long readADC();
-[v _readADC `(l ~T0 @X0 0 e? ]
-"5
-[; ;./funtions_magic.h: 5: int* BinTOBcd(long iADC);
-[; ;./funtions_magic.h: 5: int* BinTOBcd(long iADC);
-[v _BinTOBcd `(*i ~T0 @X0 0 ef1`l ]
-"4
-[; ;./funtions_magic.h: 4: int* seg7(const int * iBCD);
-[; ;./funtions_magic.h: 4: int* seg7(const int * iBCD);
-[v _seg7 `(*i ~T0 @X0 0 ef1`*Ci ]
-"9
-[; ;./funtions_magic.h: 9: void UART_print(unsigned char* cadena);
-[; ;./funtions_magic.h: 9: void UART_print(unsigned char* cadena);
-[v _UART_print `(v ~T0 @X0 0 ef1`*uc ]
-"10
-[; ;./funtions_magic.h: 10: unsigned char* ASCII_Con(int a, int b, int c);
-[; ;./funtions_magic.h: 10: unsigned char* ASCII_Con(int a, int b, int c);
-[v _ASCII_Con `(*uc ~T0 @X0 0 ef3`i`i`i ]
-"3
-[; ;./funtions_magic.h: 3: void showNumbers(int *digits);
-[; ;./funtions_magic.h: 3: void showNumbers(int *digits);
-[v _showNumbers `(v ~T0 @X0 0 ef1`*i ]
+"14 newmain.c
+[; ;newmain.c: 14: void TMR0_temporizador(void);
+[v _TMR0_temporizador `(v ~T0 @X0 0 ef ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"358 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 358:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
+"368
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 368:     struct {
+[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S32 . . T0IF . T0IE ]
+"357
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 357: typedef union {
+[u S30 `S31 1 `S32 1 ]
+[n S30 . . . ]
+"375
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"2046
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2046:     struct {
+[s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S110 . LATA0 LATA1 LATA2 LATA3 LATA4 . LATA6 LATA7 ]
+"2045
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2045: typedef union {
+[u S109 `S110 1 ]
+[n S109 . . ]
+"2057
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2057: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
+[v _LATAbits `VS109 ~T0 @X0 0 e@268 ]
+"733
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 733: extern volatile unsigned char TMR0 __attribute__((address(0x015)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@21 ]
+"1462
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1462:     struct {
+[s S83 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S83 . PS0 PS1 PS2 PSA TMR0SE TMR0CS INTEDG nWPUEN ]
+"1472
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1472:     struct {
+[s S84 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S84 . PS . T0SE T0CS ]
+"1461
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1461: typedef union {
+[u S82 `S83 1 `S84 1 ]
+[n S82 . . . ]
+"1479
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1479: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x095)));
+[v _OPTION_REGbits `VS82 ~T0 @X0 0 e@149 ]
 "55 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -562,49 +587,118 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23
 [p x LVP  =  ON          ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"15 newmain.c
-[; ;newmain.c: 15: void main(void) {
+"16 newmain.c
+[; ;newmain.c: 16: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"16
-[; ;newmain.c: 16:     init_IO();
+"17
+[; ;newmain.c: 17:     init_IO();
 [e ( _init_IO ..  ]
 "18
-[; ;newmain.c: 18:     while(1)
-[e :U 356 ]
-"19
-[; ;newmain.c: 19:     {
-{
+[; ;newmain.c: 18:     TMR0_temporizador();
+[e ( _TMR0_temporizador ..  ]
 "20
-[; ;newmain.c: 20:         long iADC = readADC();
-[v _iADC `l ~T0 @X0 1 a ]
-[e = _iADC ( _readADC ..  ]
+[; ;newmain.c: 20:     while(1)
+[e :U 356 ]
 "21
-[; ;newmain.c: 21:         int *B = BinTOBcd(iADC);
-[v _B `*i ~T0 @X0 1 a ]
-[e = _B ( _BinTOBcd (1 _iADC ]
-"23
-[; ;newmain.c: 23:         int* A = seg7(B);
-[v _A `*i ~T0 @X0 1 a ]
-[e = _A ( _seg7 (1 -> _B `*Ci ]
+[; ;newmain.c: 21:     {
+{
 "24
-[; ;newmain.c: 24:         UART_print(ASCII_Con(B[2], B[1], B[0]));
-[e ( _UART_print (1 ( _ASCII_Con (3 , , *U + _B * -> -> 2 `i `x -> -> # *U _B `i `x *U + _B * -> -> 1 `i `x -> -> # *U _B `i `x *U + _B * -> -> 0 `i `x -> -> # *U _B `i `x ]
-"25
-[; ;newmain.c: 25:         showNumbers(A);
-[e ( _showNumbers (1 _A ]
-"27
-[; ;newmain.c: 27:     }
+[; ;newmain.c: 24:     }
 }
 [e :U 355 ]
 [e $U 356  ]
 [e :U 357 ]
-"29
-[; ;newmain.c: 29:     return;
+"26
+[; ;newmain.c: 26:     return;
 [e $UE 354  ]
-"30
-[; ;newmain.c: 30: }
+"27
+[; ;newmain.c: 27: }
 [e :UE 354 ]
+}
+[v $root$_INT_TMR0 `(v ~T0 @X0 0 e ]
+"29
+[; ;newmain.c: 29: void __attribute__((picinterrupt(("")))) INT_TMR0(void){
+[v _INT_TMR0 `(v ~T1 @X0 1 ef ]
+{
+[e :U _INT_TMR0 ]
+[f ]
+"30
+[; ;newmain.c: 30:     static int count = 0;
+[v F2520 `i ~T0 @X0 1 s count ]
+[i F2520
+-> 0 `i
+]
+"31
+[; ;newmain.c: 31:     if(INTCONbits.TMR0IF == 1){
+[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 359  ]
+{
+"32
+[; ;newmain.c: 32:         if(count == 20)
+[e $ ! == F2520 -> 20 `i 360  ]
+"33
+[; ;newmain.c: 33:         {
+{
+"34
+[; ;newmain.c: 34:             LATAbits.LATA4 = ! LATAbits.LATA4;
+[e = . . _LATAbits 0 4 -> -> ! != -> . . _LATAbits 0 4 `i -> 0 `i `i `uc ]
+"35
+[; ;newmain.c: 35:             count = 0;
+[e = F2520 -> 0 `i ]
+"36
+[; ;newmain.c: 36:         }
+}
+[e :U 360 ]
+"38
+[; ;newmain.c: 38:         count++;
+[e ++ F2520 -> 1 `i ]
+"39
+[; ;newmain.c: 39:         TMR0 = 60;
+[e = _TMR0 -> -> 60 `i `uc ]
+"40
+[; ;newmain.c: 40:         INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"41
+[; ;newmain.c: 41:     }
+}
+[e :U 359 ]
+"43
+[; ;newmain.c: 43: }
+[e :UE 358 ]
+}
+"45
+[; ;newmain.c: 45: void TMR0_temporizador(void){
+[v _TMR0_temporizador `(v ~T0 @X0 1 ef ]
+{
+[e :U _TMR0_temporizador ]
+[f ]
+"47
+[; ;newmain.c: 47:      OPTION_REGbits.TMR0CS = 0;
+[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
+"48
+[; ;newmain.c: 48:      OPTION_REGbits.PSA = 0;
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+"49
+[; ;newmain.c: 49:      OPTION_REGbits.PS = 0b111;
+[e = . . _OPTION_REGbits 1 0 -> -> 7 `i `uc ]
+"51
+[; ;newmain.c: 51:      INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"52
+[; ;newmain.c: 52:      INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"53
+[; ;newmain.c: 53:      INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+"54
+[; ;newmain.c: 54:      INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"56
+[; ;newmain.c: 56:      TMR0 = 60;
+[e = _TMR0 -> -> 60 `i `uc ]
+"58
+[; ;newmain.c: 58: }
+[e :UE 361 ]
 }

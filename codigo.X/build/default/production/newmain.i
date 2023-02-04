@@ -4425,20 +4425,48 @@ void init_IO();
 # 12 "newmain.c" 2
 
 
+void TMR0_temporizador(void);
 
 void main(void) {
     init_IO();
+    TMR0_temporizador();
 
     while(1)
     {
-        long iADC = readADC();
-        int *B = BinTOBcd(iADC);
 
-        int* A = seg7(B);
-        UART_print(ASCII_Con(B[2], B[1], B[0]));
-        showNumbers(A);
 
     }
 
     return;
+}
+
+void __attribute__((picinterrupt(("")))) INT_TMR0(void){
+    static int count = 0;
+    if(INTCONbits.TMR0IF == 1){
+        if(count == 20)
+        {
+            LATAbits.LATA4 = ! LATAbits.LATA4;
+            count = 0;
+        }
+
+        count++;
+        TMR0 = 60;
+        INTCONbits.TMR0IF = 0;
+    }
+
+}
+
+void TMR0_temporizador(void){
+
+     OPTION_REGbits.TMR0CS = 0;
+     OPTION_REGbits.PSA = 0;
+     OPTION_REGbits.PS = 0b111;
+
+     INTCONbits.GIE = 1;
+     INTCONbits.PEIE = 1;
+     INTCONbits.TMR0IE = 1;
+     INTCONbits.TMR0IF = 0;
+
+     TMR0 = 60;
+
 }
