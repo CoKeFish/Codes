@@ -756,11 +756,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;funtions_magic.c: 68: {
 [f ]
 "69
-[; ;funtions_magic.c: 69:     for(int i = 0; i < 40; i++)
+[; ;funtions_magic.c: 69:     for(int i = 0; i < 10; i++)
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 40 `i 358  ]
+[e $ < _i -> 10 `i 358  ]
 [e $U 359  ]
 [e :U 358 ]
 "70
@@ -773,8 +773,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;funtions_magic.c: 72:         LATAbits.LATA3 = 0;
 [e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 "73
-[; ;funtions_magic.c: 73:         _delay((unsigned long)((25)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;funtions_magic.c: 73:         _delay((unsigned long)((33)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "74
 [; ;funtions_magic.c: 74:         LATAbits.LATA3 = 1;
 [e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
@@ -785,8 +785,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;funtions_magic.c: 77:         LATAbits.LATA2 = 0;
 [e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 "78
-[; ;funtions_magic.c: 78:         _delay((unsigned long)((25)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;funtions_magic.c: 78:         _delay((unsigned long)((33)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "79
 [; ;funtions_magic.c: 79:         LATAbits.LATA2 = 1;
 [e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
@@ -797,8 +797,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;funtions_magic.c: 82:         LATAbits.LATA1 = 0;
 [e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 "83
-[; ;funtions_magic.c: 83:         _delay((unsigned long)((25)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;funtions_magic.c: 83:         _delay((unsigned long)((33)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "84
 [; ;funtions_magic.c: 84:         LATAbits.LATA1 = 1;
 [e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
@@ -806,7 +806,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;funtions_magic.c: 85:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 40 `i 358  ]
+[e $ < _i -> 10 `i 358  ]
 [e :U 359 ]
 }
 "86

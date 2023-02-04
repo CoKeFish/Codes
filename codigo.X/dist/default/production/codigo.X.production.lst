@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Sat Feb 04 12:17:19 2023
+                                                                                               Sat Feb 04 12:30:02 2023
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	16F1827
@@ -1197,7 +1197,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1183     0582                     l1241:
   1184                           
   1185                           ;funtions_magic.c: 67: void showNumbers(int *digits);funtions_magic.c: 68: {;funtions_ma
-      +                          gic.c: 69:     for(int i = 0; i < 40; i++)
+      +                          gic.c: 69:     for(int i = 0; i < 10; i++)
   1186     0582  01F4               	clrf	showNumbers@i
   1187     0583  01F5               	clrf	showNumbers@i+1
   1188     0584                     l1247:
@@ -1218,10 +1218,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1203     058F  118C               	bcf	12,3	;volatile
   1204     0590                     l1251:
   1205                           
-  1206                           ;funtions_magic.c: 73:         _delay((unsigned long)((25)*(4000000/4000.0)));
-  1207     0590  3021               	movlw	33
+  1206                           ;funtions_magic.c: 73:         _delay((unsigned long)((33)*(4000000/4000.0)));
+  1207     0590  302B               	movlw	43
   1208     0591  00F3               	movwf	??_showNumbers
-  1209     0592  3076               	movlw	118
+  1209     0592  30DA               	movlw	218
   1210     0593                     u817:
   1211     0593  0B89               	decfsz	9,f
   1212     0594  2D93               	goto	u817
@@ -1251,10 +1251,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1236     05A5  0022               	movlb	2	; select bank2
   1237     05A6  110C               	bcf	12,2	;volatile
   1238                           
-  1239                           ;funtions_magic.c: 78:         _delay((unsigned long)((25)*(4000000/4000.0)));
-  1240     05A7  3021               	movlw	33
+  1239                           ;funtions_magic.c: 78:         _delay((unsigned long)((33)*(4000000/4000.0)));
+  1240     05A7  302B               	movlw	43
   1241     05A8  00F3               	movwf	??_showNumbers
-  1242     05A9  3076               	movlw	118
+  1242     05A9  30DA               	movlw	218
   1243     05AA                     u827:
   1244     05AA  0B89               	decfsz	9,f
   1245     05AB  2DAA               	goto	u827
@@ -1285,10 +1285,10 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1270     05BD  108C               	bcf	12,1	;volatile
   1271     05BE                     l1265:
   1272                           
-  1273                           ;funtions_magic.c: 83:         _delay((unsigned long)((25)*(4000000/4000.0)));
-  1274     05BE  3021               	movlw	33
+  1273                           ;funtions_magic.c: 83:         _delay((unsigned long)((33)*(4000000/4000.0)));
+  1274     05BE  302B               	movlw	43
   1275     05BF  00F3               	movwf	??_showNumbers
-  1276     05C0  3076               	movlw	118
+  1276     05C0  30DA               	movlw	218
   1277     05C1                     u837:
   1278     05C1  0B89               	decfsz	9,f
   1279     05C2  2DC1               	goto	u837
@@ -1315,7 +1315,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1300     05D0  0273               	subwf	??_showNumbers,w
   1301     05D1  1D03               	skipz
   1302     05D2  2DD5               	goto	u805
-  1303     05D3  3028               	movlw	40
+  1303     05D3  300A               	movlw	10
   1304     05D4  0274               	subwf	showNumbers@i,w
   1305     05D5                     u805:
   1306     05D5  1C03               	skipc
@@ -3352,7 +3352,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Sat Feb 04 12:17:19 2023
+Symbol Table                                                                                   Sat Feb 04 12:30:02 2023
 
                      l19 053D                       l60 04C1                       l53 07E8  
                      l71 0439                       l63 04FC                       l80 03E0  
