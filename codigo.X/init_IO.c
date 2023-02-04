@@ -1,7 +1,7 @@
 
 #include "init_IO.h"
 
-void init_IO()
+void init_IO(void)
 {
         //Configuracion oscilador
     OSCCONbits.SCS = 0;             //Elegimos el oscilador interno
@@ -47,10 +47,13 @@ void init_IO()
     TRISBbits.TRISB7 = 0;
     
     //ADC
+    ADCON0bits.ADON = 0;
     FVRCONbits.FVREN = 1;       //Habilitamos el voltaje de referencia interno
     FVRCONbits.ADFVR = 0b11;    //Asignamos el voltaje de referencia a 4.096V
     ADCON1bits.ADNREF = 0;      //Asignamos el voltaje de referencia negativo a GND
     ADCON1bits.ADPREF = 0b11;   //Asignamos el voltaje de referencia positivo al voltaje de referencia interno
+    PIE1bits.ADIE = 1;          //Habilitamos las interrupciones del ADC
+    PIR1bits.ADIF = 0;          //Nos aseguramos que este en 0 la bandera
     
     
     //Inicializamos el valor logico de las salidas
@@ -66,4 +69,37 @@ void init_IO()
     GDis = 0;
     
     init_UART();                //Configuramos el UART 
+    TMR0_INIT();
+}
+
+//Configuramos el UART
+void init_UART(void)
+{
+    APFCON1bits.TXCKSEL = 0;        //Seleccionamos el pin RB2 como TX
+    TXSTAbits.TRMT = 1;             //Buffer de trasmicion vacio
+    TXSTAbits.TXEN = 1;             //Tramicion habilitada
+    BAUDCONbits.RCIDL = 1;          //ADC no ocupado
+    
+    
+    TXSTAbits.SYNC = 0;             //Transmicion Asincrona
+    TXSTAbits.TX9 = 0;              //8 bits de trasmicion
+    TXSTAbits.BRGH = 1;             //Velocidad de convercion alta
+    SPBRG = 25;                     //Transmicion a 9600 baudios
+    RCSTAbits.SPEN = 1;             //No entendi que hace, pero se debe poner
+    
+}
+
+void TMR0_INIT(void){
+     
+     OPTION_REGbits.TMR0CS = 0;          //Modo Temporizador
+     OPTION_REGbits.PSA = 0;             //Prescaler habilitado
+     OPTION_REGbits.PS = 0b111;          //Prescaler 1:256
+     
+     INTCONbits.GIE = 1;
+     INTCONbits.PEIE = 1;
+     INTCONbits.TMR0IE = 1;
+     INTCONbits.TMR0IF = 0;
+   
+     TMR0 = 60;
+     //T0CONbits.TMR0ON = 1; //Enciende TMR0   
 }

@@ -11,11 +11,11 @@
 #include "funtions_magic.h"
 #include "init_IO.h"
 
-void TMR0_temporizador(void);
+
 
 void main(void) {
     init_IO();
-    TMR0_temporizador();
+    
     
     while(1)
     {
@@ -32,28 +32,24 @@ void __interrupt() INT_TMR0(void){
         if(count == 20)
         {
             ADis = ! ADis;
+            readADC();
             count = 0;
         }
         //ADis = ! ADis; 
         count++;
         TMR0 = 60;
         INTCONbits.TMR0IF = 0;
+        return;
+    }
+    if(PIR1bits.ADIF == 1){
+        
+        BDis = ! BDis; 
+        PIR1bits.ADIF = 0;
+        ADCON0bits.ADON = 0;
+        return;
     }
     
 }
 
-void TMR0_temporizador(void){
-     
-     OPTION_REGbits.TMR0CS = 0;          //Modo Temporizador
-     OPTION_REGbits.PSA = 0;             //Prescaler habilitado
-     OPTION_REGbits.PS = 0b111;          //Prescaler 1:256
-     
-     INTCONbits.GIE = 1;
-     INTCONbits.PEIE = 1;
-     INTCONbits.TMR0IE = 1;
-     INTCONbits.TMR0IF = 0;
-   
-     TMR0 = 60;
-     //T0CONbits.TMR0ON = 1; //Enciende TMR0   
-}
+
 

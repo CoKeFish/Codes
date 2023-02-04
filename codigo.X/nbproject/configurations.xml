@@ -23,6 +23,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
+      <itemPath>codigo.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

@@ -4370,8 +4370,7 @@ void showNumber(int digit);
 void showNumbers(int *digits);
 int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
-long readADC();
-void init_UART();
+void readADC();
 void UART_write(char c);
 void UART_print(unsigned char* cadena);
 unsigned char* ASCII_Con(int a, int b, int c);
@@ -4413,23 +4412,24 @@ void showNumber(int digit);
 void showNumbers(int *digits);
 int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
-long readADC();
-void init_UART();
+void readADC();
 void UART_write(char c);
 void UART_print(unsigned char* cadena);
 unsigned char* ASCII_Con(int a, int b, int c);
 # 5 "./init_IO.h" 2
 
 
-void init_IO();
+void init_IO(void);
+void TMR0_INIT(void);
+void init_UART(void);
 # 12 "newmain.c" 2
 
 
-void TMR0_temporizador(void);
+
 
 void main(void) {
     init_IO();
-    TMR0_temporizador();
+
 
     while(1)
     {
@@ -4446,27 +4446,21 @@ void __attribute__((picinterrupt(("")))) INT_TMR0(void){
         if(count == 20)
         {
             LATAbits.LATA4 = ! LATAbits.LATA4;
+            readADC();
             count = 0;
         }
 
         count++;
         TMR0 = 60;
         INTCONbits.TMR0IF = 0;
+        return;
     }
+    if(PIR1bits.ADIF == 1){
 
-}
-
-void TMR0_temporizador(void){
-
-     OPTION_REGbits.TMR0CS = 0;
-     OPTION_REGbits.PSA = 0;
-     OPTION_REGbits.PS = 0b111;
-
-     INTCONbits.GIE = 1;
-     INTCONbits.PEIE = 1;
-     INTCONbits.TMR0IE = 1;
-     INTCONbits.TMR0IF = 0;
-
-     TMR0 = 60;
+        LATAbits.LATA6 = ! LATAbits.LATA6;
+        PIR1bits.ADIF = 0;
+        ADCON0bits.ADON = 0;
+        return;
+    }
 
 }

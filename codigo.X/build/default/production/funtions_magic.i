@@ -4363,8 +4363,7 @@ void showNumber(int digit);
 void showNumbers(int *digits);
 int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
-long readADC();
-void init_UART();
+void readADC();
 void UART_write(char c);
 void UART_print(unsigned char* cadena);
 unsigned char* ASCII_Con(int a, int b, int c);
@@ -4455,7 +4454,7 @@ void showNumbers(int *digits)
 
 
 
-long readADC()
+void readADC()
 {
     ADCON0bits.ADON = 1;
 
@@ -4466,30 +4465,10 @@ long readADC()
     ADCON1bits.ADFM = 1;
 
     ADCON0bits.GO_nDONE = 1;
-
-    while(ADCON0bits.GO_nDONE);
-
-    long r = (ADRESH<<8) + ADRESL;
-    return r;
-
+# 109 "funtions_magic.c"
 }
 
 
-void init_UART()
-{
-    APFCON1bits.TXCKSEL = 0;
-    TXSTAbits.TRMT = 1;
-    TXSTAbits.TXEN = 1;
-    BAUDCONbits.RCIDL = 1;
-
-
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.TX9 = 0;
-    TXSTAbits.BRGH = 1;
-    SPBRG = 25;
-    RCSTAbits.SPEN = 1;
-
-}
 
 void UART_write(char c)
 {

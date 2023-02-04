@@ -87,7 +87,7 @@ void showNumbers(int *digits)
 
 
 //Configura y lee el ADC
-long readADC()
+void readADC()
 {
     ADCON0bits.ADON = 1;        //Habilitamos el ADC
     
@@ -99,29 +99,16 @@ long readADC()
     
     ADCON0bits.GO_nDONE = 1;    //Iniciamos la convercion
     
+    /*
     while(ADCON0bits.GO_nDONE); //Esperamos a que termine la convercion
     
     long r = (ADRESH<<8) + ADRESL;  //Concatenamos los valores de los registros
-    return r;   
+    return r;
+     */
     
 }
 
-//Configuramos el UART
-void init_UART()
-{
-    APFCON1bits.TXCKSEL = 0;        //Seleccionamos el pin RB2 como TX
-    TXSTAbits.TRMT = 1;             //Buffer de trasmicion vacio
-    TXSTAbits.TXEN = 1;             //Tramicion habilitada
-    BAUDCONbits.RCIDL = 1;          //ADC no ocupado
-    
-    
-    TXSTAbits.SYNC = 0;             //Transmicion Asincrona
-    TXSTAbits.TX9 = 0;              //8 bits de trasmicion
-    TXSTAbits.BRGH = 1;             //Velocidad de convercion alta
-    SPBRG = 25;                     //Transmicion a 9600 baudios
-    RCSTAbits.SPEN = 1;             //No entendi que hace, pero se debe poner
-    
-}
+
 
 void UART_write(char c)
 {
