@@ -17,12 +17,7 @@ void main(void) {
     
     while(1)
     {
-        long iADC = readADC();
-        int *B = BinTOBcd(iADC);
-        //int B[3] = {7, 8, 10};
-        int* A = seg7(B);
-        UART_print(ASCII_Con(B[2], B[1], B[0]));
-        showNumbers(A);
+        
         
     }
     

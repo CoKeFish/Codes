@@ -45,7 +45,7 @@
 
 
 #define _XTAL_FREQ 4000000      //Frecuencia del oscilador
-#define DELAY_SYS 25
+#define DELAY_SYS 33
 
 #include <xc.h>
 
