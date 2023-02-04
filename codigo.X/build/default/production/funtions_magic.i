@@ -4434,20 +4434,23 @@ void showNumber(int digit)
 
 void showNumbers(int *digits)
 {
-    showNumber(digits[0]);
-    LATAbits.LATA3 = 0;
-    _delay((unsigned long)((500)*(4000000/4000.0)));
-    LATAbits.LATA3 = 1;
+    for(int i = 0; i < 40; i++)
+    {
+        showNumber(digits[0]);
+        LATAbits.LATA3 = 0;
+        _delay((unsigned long)((25)*(4000000/4000.0)));
+        LATAbits.LATA3 = 1;
 
-    showNumber(digits[1]);
-    LATAbits.LATA2 = 0;
-    _delay((unsigned long)((500)*(4000000/4000.0)));
-    LATAbits.LATA2 = 1;
+        showNumber(digits[1]);
+        LATAbits.LATA2 = 0;
+        _delay((unsigned long)((25)*(4000000/4000.0)));
+        LATAbits.LATA2 = 1;
 
-    showNumber(digits[2]);
-    LATAbits.LATA1 = 0;
-    _delay((unsigned long)((500)*(4000000/4000.0)));
-    LATAbits.LATA1 = 1;
+        showNumber(digits[2]);
+        LATAbits.LATA1 = 0;
+        _delay((unsigned long)((25)*(4000000/4000.0)));
+        LATAbits.LATA1 = 1;
+    }
 }
 
 

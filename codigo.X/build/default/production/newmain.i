@@ -4435,8 +4435,8 @@ void main(void) {
         int *B = BinTOBcd(iADC);
 
         int* A = seg7(B);
-        showNumbers(A);
         UART_print(ASCII_Con(B[2], B[1], B[0]));
+        showNumbers(A);
 
     }
 

@@ -66,20 +66,23 @@ void showNumber(int digit)
 //La idea es manejar una frecuencia lo suficientemente alta para que de la ilucion de tres digitos encendidos al tiempo
 void showNumbers(int *digits)
 {
-    showNumber(digits[0]);
-    T3 = 0;
-    __delay_ms(DELAY_SYS);
-    T3 = 1;
-    
-    showNumber(digits[1]);
-    T2 = 0;
-    __delay_ms(DELAY_SYS);
-    T2 = 1;
-    
-    showNumber(digits[2]);
-    T1 = 0;
-    __delay_ms(DELAY_SYS);
-    T1 = 1;
+    for(int i = 0; i < 40; i++)
+    {
+        showNumber(digits[0]);
+        T3 = 0;
+        __delay_ms(DELAY_SYS);
+        T3 = 1;
+
+        showNumber(digits[1]);
+        T2 = 0;
+        __delay_ms(DELAY_SYS);
+        T2 = 1;
+
+        showNumber(digits[2]);
+        T1 = 0;
+        __delay_ms(DELAY_SYS);
+        T1 = 1;
+    }
 }
 
 
