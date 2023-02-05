@@ -68,7 +68,7 @@ void init_IO(void)
     FDis = 0;
     GDis = 0;
     
-    init_UART();                //Configuramos el UART 
+    init_UART();                //Configuramos el UART
     TMR0_INIT();
 }
 
@@ -85,7 +85,7 @@ void init_UART(void)
     TXSTAbits.TX9 = 0;              //8 bits de trasmicion
     TXSTAbits.BRGH = 1;             //Velocidad de convercion alta
     SPBRG = 25;                     //Transmicion a 9600 baudios
-    RCSTAbits.SPEN = 1;             //No entendi que hace, pero se debe poner
+    RCSTAbits.SPEN = 1;             //Configuracion interna de pines
     
 }
 
@@ -100,6 +100,6 @@ void TMR0_INIT(void){
      INTCONbits.TMR0IE = 1;
      INTCONbits.TMR0IF = 0;
    
-     TMR0 = 60;
+     TMR0 = 158;
      //T0CONbits.TMR0ON = 1; //Enciende TMR0   
 }

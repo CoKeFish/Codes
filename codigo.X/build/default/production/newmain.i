@@ -4367,7 +4367,7 @@ extern __bank0 __bit __timeout;
 # 1 "./funtions_magic.h" 1
 
 void showNumber(int digit);
-void showNumbers(int *digits);
+void showNumbers(int *digits, int n);
 int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
 void readADC();
@@ -4409,7 +4409,7 @@ unsigned char* ASCII_Con(int a, int b, int c);
 # 1 "./funtions_magic.h" 1
 
 void showNumber(int digit);
-void showNumbers(int *digits);
+void showNumbers(int *digits, int n);
 int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
 void readADC();
@@ -4441,9 +4441,12 @@ void main(void) {
 }
 
 void __attribute__((picinterrupt(("")))) INT_TMR0(void){
+
     static int count = 0;
+    static int* A ;
+
     if(INTCONbits.TMR0IF == 1){
-        if(count == 20)
+        if(count == 40)
         {
             LATAbits.LATA4 = ! LATAbits.LATA4;
             readADC();
@@ -4451,8 +4454,9 @@ void __attribute__((picinterrupt(("")))) INT_TMR0(void){
         }
 
         count++;
-        TMR0 = 60;
+        TMR0 = 158;
         INTCONbits.TMR0IF = 0;
+        showNumbers(A, count);
         return;
     }
     if(PIR1bits.ADIF == 1){
@@ -4460,6 +4464,12 @@ void __attribute__((picinterrupt(("")))) INT_TMR0(void){
         LATAbits.LATA6 = ! LATAbits.LATA6;
         PIR1bits.ADIF = 0;
         ADCON0bits.ADON = 0;
+
+        int *B = BinTOBcd(((ADRESH<<8) + ADRESL));
+
+
+        A = seg7(B);
+        UART_print(ASCII_Con(B[2], B[1], B[0]));
         return;
     }
 

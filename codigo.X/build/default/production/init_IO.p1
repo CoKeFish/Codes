@@ -972,8 +972,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;init_IO.c: 101:      INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
 "103
-[; ;init_IO.c: 103:      TMR0 = 60;
-[e = _TMR0 -> -> 60 `i `uc ]
+[; ;init_IO.c: 103:      TMR0 = 158;
+[e = _TMR0 -> -> 158 `i `uc ]
 "105
 [; ;init_IO.c: 105: }
 [e :UE 356 ]

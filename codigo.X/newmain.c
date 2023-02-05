@@ -27,9 +27,12 @@ void main(void) {
 }
 
 void __interrupt() INT_TMR0(void){
+    
     static int count = 0;
+    static int* A ;
+    
     if(INTCONbits.TMR0IF == 1){
-        if(count == 20)
+        if(count == 40)
         {
             ADis = ! ADis;
             readADC();
@@ -37,8 +40,9 @@ void __interrupt() INT_TMR0(void){
         }
         //ADis = ! ADis; 
         count++;
-        TMR0 = 60;
+        TMR0 = 158;
         INTCONbits.TMR0IF = 0;
+        showNumbers(A, count);
         return;
     }
     if(PIR1bits.ADIF == 1){
@@ -46,6 +50,12 @@ void __interrupt() INT_TMR0(void){
         BDis = ! BDis; 
         PIR1bits.ADIF = 0;
         ADCON0bits.ADON = 0;
+        
+        int *B = BinTOBcd(((ADRESH<<8) + ADRESL));
+        //int *B = BinTOBcd(iADC);
+        //int B[3] = {7, 8, 10};
+        A = seg7(B);
+        UART_print(ASCII_Con(B[2], B[1], B[0]));
         return;
     }
     

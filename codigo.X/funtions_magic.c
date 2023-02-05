@@ -64,25 +64,30 @@ void showNumber(int digit)
 
 //Permite alternar entre el encendido y apagado de cada digito
 //La idea es manejar una frecuencia lo suficientemente alta para que de la ilucion de tres digitos encendidos al tiempo
-void showNumbers(int *digits)
+void showNumbers(int *digits, int n)
 {
-    for(int i = 0; i < 10; i++)
+    
+    //static int a = 0;
+
+    if(n%3 == 0)
     {
         showNumber(digits[0]);
         T3 = 0;
-        __delay_ms(DELAY_SYS);
-        T3 = 1;
-
-        showNumber(digits[1]);
-        T2 = 0;
-        __delay_ms(DELAY_SYS);
-        T2 = 1;
-
-        showNumber(digits[2]);
-        T1 = 0;
-        __delay_ms(DELAY_SYS);
         T1 = 1;
     }
+    if(n%3 == 1)
+    {
+        showNumber(digits[1]);
+        T2 = 0;
+        T3 = 1;
+    }
+    if(n%3 == 2)
+    {   
+        showNumber(digits[2]);
+        T1 = 0;
+        T2 = 1;
+    }
+    
 }
 
 

@@ -4363,7 +4363,7 @@ extern __bank0 __bit __timeout;
 # 1 "./funtions_magic.h" 1
 
 void showNumber(int digit);
-void showNumbers(int *digits);
+void showNumbers(int *digits, int n);
 int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
 void readADC();
@@ -4478,6 +4478,6 @@ void TMR0_INIT(void){
      INTCONbits.TMR0IE = 1;
      INTCONbits.TMR0IF = 0;
 
-     TMR0 = 60;
+     TMR0 = 158;
 
 }

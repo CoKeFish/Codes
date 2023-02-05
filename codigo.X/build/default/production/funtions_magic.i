@@ -4360,7 +4360,7 @@ extern __bank0 __bit __timeout;
 # 1 "./funtions_magic.h" 1
 
 void showNumber(int digit);
-void showNumbers(int *digits);
+void showNumbers(int *digits, int n);
 int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
 void readADC();
@@ -4431,25 +4431,30 @@ void showNumber(int digit)
 
 
 
-void showNumbers(int *digits)
+void showNumbers(int *digits, int n)
 {
-    for(int i = 0; i < 10; i++)
+
+
+
+    if(n%3 == 0)
     {
         showNumber(digits[0]);
         LATAbits.LATA3 = 0;
-        _delay((unsigned long)((33)*(4000000/4000.0)));
-        LATAbits.LATA3 = 1;
-
-        showNumber(digits[1]);
-        LATAbits.LATA2 = 0;
-        _delay((unsigned long)((33)*(4000000/4000.0)));
-        LATAbits.LATA2 = 1;
-
-        showNumber(digits[2]);
-        LATAbits.LATA1 = 0;
-        _delay((unsigned long)((33)*(4000000/4000.0)));
         LATAbits.LATA1 = 1;
     }
+    if(n%3 == 1)
+    {
+        showNumber(digits[1]);
+        LATAbits.LATA2 = 0;
+        LATAbits.LATA3 = 1;
+    }
+    if(n%3 == 2)
+    {
+        showNumber(digits[2]);
+        LATAbits.LATA1 = 0;
+        LATAbits.LATA2 = 1;
+    }
+
 }
 
 
@@ -4465,7 +4470,7 @@ void readADC()
     ADCON1bits.ADFM = 1;
 
     ADCON0bits.GO_nDONE = 1;
-# 109 "funtions_magic.c"
+# 114 "funtions_magic.c"
 }
 
 
