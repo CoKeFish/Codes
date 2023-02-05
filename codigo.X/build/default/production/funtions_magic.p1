@@ -1,27 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"2046 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2046:     struct {
-[s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S110 . LATA0 LATA1 LATA2 LATA3 LATA4 . LATA6 LATA7 ]
-"2045
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2045: typedef union {
-[u S109 `S110 1 ]
-[n S109 . . ]
-"2057
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2057: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS109 ~T0 @X0 0 e@268 ]
-"2103
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2103:     struct {
-[s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S112 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"2102
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2102: typedef union {
-[u S111 `S112 1 ]
-[n S111 . . ]
-"2114
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2114: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
-[v _LATBbits `VS111 ~T0 @X0 0 e@269 ]
-"1894
+"1894 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1894:     struct {
 [s S103 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S103 . ADON GO_nDONE CHS0 CHS1 CHS2 CHS3 CHS4 ]
@@ -69,6 +47,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3391
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 3391: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x19E)));
 [v _TXSTAbits `VS181 ~T0 @X0 0 e@414 ]
+"1596
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1596:     struct {
+[s S88 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S88 . SWDTEN WDTPS0 WDTPS1 WDTPS2 WDTPS3 WDTPS4 ]
+"1604
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1604:     struct {
+[s S89 :1 `uc 1 :5 `uc 1 ]
+[n S89 . . WDTPS ]
+"1595
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1595: typedef union {
+[u S87 `S88 1 `S89 1 ]
+[n S87 . . . ]
+"1609
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1609: extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0x097)));
+[v _WDTCONbits `VS87 ~T0 @X0 0 e@151 ]
 "55 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -546,7 +539,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7 ./config.h
 [p x FOSC  =  INTOSC     ]
 "8
-[p x WDTE  =  OFF        ]
+[p x WDTE  =  ON        ]
 "9
 [p x PWRTE  =  OFF       ]
 "10
@@ -588,325 +581,166 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "14
 [; ;funtions_magic.c: 14:     static int r[3];
-[v F2500 `i ~T0 @X0 -> 3 `i s r ]
+[v F2493 `i ~T0 @X0 -> 3 `i s r ]
 "15
 [; ;funtions_magic.c: 15:     r[0] = ((iADC*1000)/1024)%10;
-[e = *U + &U F2500 * -> -> -> 0 `i `ui `ux -> -> # *U &U F2500 `ui `ux -> % / * _iADC -> -> 1000 `i `l -> -> 1024 `i `l -> -> 10 `i `l `i ]
+[e = *U + &U F2493 * -> -> -> 0 `i `ui `ux -> -> # *U &U F2493 `ui `ux -> % / * _iADC -> -> 1000 `i `l -> -> 1024 `i `l -> -> 10 `i `l `i ]
 "16
 [; ;funtions_magic.c: 16:     r[1] = (((iADC*1000)/1024)/10)%10;
-[e = *U + &U F2500 * -> -> -> 1 `i `ui `ux -> -> # *U &U F2500 `ui `ux -> % / / * _iADC -> -> 1000 `i `l -> -> 1024 `i `l -> -> 10 `i `l -> -> 10 `i `l `i ]
+[e = *U + &U F2493 * -> -> -> 1 `i `ui `ux -> -> # *U &U F2493 `ui `ux -> % / / * _iADC -> -> 1000 `i `l -> -> 1024 `i `l -> -> 10 `i `l -> -> 10 `i `l `i ]
 "17
 [; ;funtions_magic.c: 17:     r[2] = (((iADC*1000)/1024)/10)/10;
-[e = *U + &U F2500 * -> -> -> 2 `i `ui `ux -> -> # *U &U F2500 `ui `ux -> / / / * _iADC -> -> 1000 `i `l -> -> 1024 `i `l -> -> 10 `i `l -> -> 10 `i `l `i ]
+[e = *U + &U F2493 * -> -> -> 2 `i `ui `ux -> -> # *U &U F2493 `ui `ux -> / / / * _iADC -> -> 1000 `i `l -> -> 1024 `i `l -> -> 10 `i `l -> -> 10 `i `l `i ]
 "19
 [; ;funtions_magic.c: 19:     return r;
-[e ) &U F2500 ]
+[e ) &U F2493 ]
 [e $UE 354  ]
 "21
 [; ;funtions_magic.c: 21: }
 [e :UE 354 ]
 }
+"24
+[; ;funtions_magic.c: 24: void readADC()
+[v _readADC `(v ~T0 @X0 1 ef ]
 "25
-[; ;funtions_magic.c: 25: int* seg7(const int * iBCD)
-[v _seg7 `(*i ~T0 @X0 1 ef1`*Ci ]
-"26
-[; ;funtions_magic.c: 26: {
+[; ;funtions_magic.c: 25: {
 {
-[e :U _seg7 ]
-"25
-[; ;funtions_magic.c: 25: int* seg7(const int * iBCD)
-[v _iBCD `*Ci ~T0 @X0 1 r1 ]
-"26
-[; ;funtions_magic.c: 26: {
+[e :U _readADC ]
 [f ]
-[v F2503 `i ~T0 @X0 -> 10 `i s ]
-[i F2503
-:U ..
+"26
+[; ;funtions_magic.c: 26:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
 "28
-[; ;funtions_magic.c: 28:     int numbers[10] = {
--> 126 `i
--> 48 `i
--> 109 `i
--> 121 `i
--> 51 `i
--> 91 `i
--> 95 `i
--> 112 `i
--> 127 `i
--> 123 `i
-..
-]
-[v _numbers `i ~T0 @X0 -> 10 `i a ]
-[e = _numbers F2503 ]
-"42
-[; ;funtions_magic.c: 42:     static int r[3];
-[v F2505 `i ~T0 @X0 -> 3 `i s r ]
+[; ;funtions_magic.c: 28:     ADCON1bits.ADCS = 0b001;
+[e = . . _ADCON1bits 1 2 -> -> 1 `i `uc ]
+"30
+[; ;funtions_magic.c: 30:     ADCON0bits.CHS = 0b00000;
+[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+"32
+[; ;funtions_magic.c: 32:     ADCON1bits.ADFM = 1;
+[e = . . _ADCON1bits 0 7 -> -> 1 `i `uc ]
+"34
+[; ;funtions_magic.c: 34:     ADCON0bits.GO_nDONE = 1;
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
 "43
-[; ;funtions_magic.c: 43:     r[0] = numbers[iBCD[0]];
-[e = *U + &U F2505 * -> -> -> 0 `i `ui `ux -> -> # *U &U F2505 `ui `ux *U + &U _numbers * -> -> *U + _iBCD * -> -> 0 `i `x -> -> # *U _iBCD `i `x `ui `ux -> -> # *U &U _numbers `ui `ux ]
-"44
-[; ;funtions_magic.c: 44:     r[1] = numbers[iBCD[1]];
-[e = *U + &U F2505 * -> -> -> 1 `i `ui `ux -> -> # *U &U F2505 `ui `ux *U + &U _numbers * -> -> *U + _iBCD * -> -> 1 `i `x -> -> # *U _iBCD `i `x `ui `ux -> -> # *U &U _numbers `ui `ux ]
-"45
-[; ;funtions_magic.c: 45:     r[2] = numbers[iBCD[2]];
-[e = *U + &U F2505 * -> -> -> 2 `i `ui `ux -> -> # *U &U F2505 `ui `ux *U + &U _numbers * -> -> *U + _iBCD * -> -> 2 `i `x -> -> # *U _iBCD `i `x `ui `ux -> -> # *U &U _numbers `ui `ux ]
-"47
-[; ;funtions_magic.c: 47:     return r;
-[e ) &U F2505 ]
-[e $UE 355  ]
-"49
-[; ;funtions_magic.c: 49: }
+[; ;funtions_magic.c: 43: }
 [e :UE 355 ]
 }
+"47
+[; ;funtions_magic.c: 47: void UART_write(char c)
+[v _UART_write `(v ~T0 @X0 1 ef1`uc ]
+"48
+[; ;funtions_magic.c: 48: {
+{
+[e :U _UART_write ]
+"47
+[; ;funtions_magic.c: 47: void UART_write(char c)
+[v _c `uc ~T0 @X0 1 r1 ]
+"48
+[; ;funtions_magic.c: 48: {
+[f ]
+"49
+[; ;funtions_magic.c: 49:     TXREG = c;
+[e = _TXREG -> _c `uc ]
+"50
+[; ;funtions_magic.c: 50:     while(TXSTAbits.TRMT == 0);
+[e $U 357  ]
+[e :U 358 ]
+[e :U 357 ]
+[e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 358  ]
+[e :U 359 ]
+"51
+[; ;funtions_magic.c: 51: }
+[e :UE 356 ]
+}
 "53
-[; ;funtions_magic.c: 53: void showNumber(int digit)
-[v _showNumber `(v ~T0 @X0 1 ef1`i ]
+[; ;funtions_magic.c: 53: void UART_print(unsigned char* cadena)
+[v _UART_print `(v ~T0 @X0 1 ef1`*uc ]
 "54
 [; ;funtions_magic.c: 54: {
 {
-[e :U _showNumber ]
+[e :U _UART_print ]
 "53
-[; ;funtions_magic.c: 53: void showNumber(int digit)
-[v _digit `i ~T0 @X0 1 r1 ]
+[; ;funtions_magic.c: 53: void UART_print(unsigned char* cadena)
+[v _cadena `*uc ~T0 @X0 1 r1 ]
 "54
 [; ;funtions_magic.c: 54: {
 [f ]
 "55
-[; ;funtions_magic.c: 55:     LATAbits.LATA4 = !!(digit & (1<<6));
-[e = . . _LATAbits 0 4 -> -> ! ! != & _digit << -> 1 `i -> 6 `i -> 0 `i `i `uc ]
+[; ;funtions_magic.c: 55:     while(*cadena != 0)
+[e $U 361  ]
+[e :U 362 ]
 "56
-[; ;funtions_magic.c: 56:     LATAbits.LATA6 = !!(digit & (1<<5));
-[e = . . _LATAbits 0 6 -> -> ! ! != & _digit << -> 1 `i -> 5 `i -> 0 `i `i `uc ]
+[; ;funtions_magic.c: 56:     {
+{
 "57
-[; ;funtions_magic.c: 57:     LATAbits.LATA7 = !!(digit & (1<<4));
-[e = . . _LATAbits 0 7 -> -> ! ! != & _digit << -> 1 `i -> 4 `i -> 0 `i `i `uc ]
+[; ;funtions_magic.c: 57:         UART_write(*cadena);
+[e ( _UART_write (1 -> *U _cadena `uc ]
 "58
-[; ;funtions_magic.c: 58:     LATBbits.LATB0 = !!(digit & (1<<3));
-[e = . . _LATBbits 0 0 -> -> ! ! != & _digit << -> 1 `i -> 3 `i -> 0 `i `i `uc ]
+[; ;funtions_magic.c: 58:         cadena++;
+[e ++ _cadena * -> -> 1 `i `x -> -> # *U _cadena `i `x ]
 "59
-[; ;funtions_magic.c: 59:     LATBbits.LATB3 = !!(digit & (1<<2));
-[e = . . _LATBbits 0 3 -> -> ! ! != & _digit << -> 1 `i -> 2 `i -> 0 `i `i `uc ]
+[; ;funtions_magic.c: 59:     }
+}
+[e :U 361 ]
+"55
+[; ;funtions_magic.c: 55:     while(*cadena != 0)
+[e $ != -> *U _cadena `i -> 0 `i 362  ]
+[e :U 363 ]
 "60
-[; ;funtions_magic.c: 60:     LATBbits.LATB4 = !!(digit & (1<<1));
-[e = . . _LATBbits 0 4 -> -> ! ! != & _digit << -> 1 `i -> 1 `i -> 0 `i `i `uc ]
+[; ;funtions_magic.c: 60:     WDTCONbits.WDTPS = 0b01010;
+[e = . . _WDTCONbits 1 1 -> -> 10 `i `uc ]
 "61
-[; ;funtions_magic.c: 61:     LATBbits.LATB5 = digit & 1;
-[e = . . _LATBbits 0 5 -> & _digit -> 1 `i `uc ]
+[; ;funtions_magic.c: 61:     __asm("sleep");
+[; <" sleep ;# ">
 "62
 [; ;funtions_magic.c: 62: }
-[e :UE 356 ]
+[e :UE 360 ]
 }
-"67
-[; ;funtions_magic.c: 67: void showNumbers(int *digits, int n)
-[v _showNumbers `(v ~T0 @X0 1 ef2`*i`i ]
-"68
-[; ;funtions_magic.c: 68: {
-{
-[e :U _showNumbers ]
-"67
-[; ;funtions_magic.c: 67: void showNumbers(int *digits, int n)
-[v _digits `*i ~T0 @X0 1 r1 ]
-[v _n `i ~T0 @X0 1 r2 ]
-"68
-[; ;funtions_magic.c: 68: {
-[f ]
-"72
-[; ;funtions_magic.c: 72:     if(n%3 == 0)
-[e $ ! == % _n -> 3 `i -> 0 `i 358  ]
-"73
-[; ;funtions_magic.c: 73:     {
-{
-"74
-[; ;funtions_magic.c: 74:         showNumber(digits[0]);
-[e ( _showNumber (1 *U + _digits * -> -> 0 `i `x -> -> # *U _digits `i `x ]
-"75
-[; ;funtions_magic.c: 75:         LATAbits.LATA3 = 0;
-[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
-"76
-[; ;funtions_magic.c: 76:         LATAbits.LATA1 = 1;
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-"77
-[; ;funtions_magic.c: 77:     }
-}
-[e :U 358 ]
-"78
-[; ;funtions_magic.c: 78:     if(n%3 == 1)
-[e $ ! == % _n -> 3 `i -> 1 `i 359  ]
-"79
-[; ;funtions_magic.c: 79:     {
-{
-"80
-[; ;funtions_magic.c: 80:         showNumber(digits[1]);
-[e ( _showNumber (1 *U + _digits * -> -> 1 `i `x -> -> # *U _digits `i `x ]
-"81
-[; ;funtions_magic.c: 81:         LATAbits.LATA2 = 0;
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-"82
-[; ;funtions_magic.c: 82:         LATAbits.LATA3 = 1;
-[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
-"83
-[; ;funtions_magic.c: 83:     }
-}
-[e :U 359 ]
-"84
-[; ;funtions_magic.c: 84:     if(n%3 == 2)
-[e $ ! == % _n -> 3 `i -> 2 `i 360  ]
-"85
-[; ;funtions_magic.c: 85:     {
-{
-"86
-[; ;funtions_magic.c: 86:         showNumber(digits[2]);
-[e ( _showNumber (1 *U + _digits * -> -> 2 `i `x -> -> # *U _digits `i `x ]
-"87
-[; ;funtions_magic.c: 87:         LATAbits.LATA1 = 0;
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-"88
-[; ;funtions_magic.c: 88:         LATAbits.LATA2 = 1;
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"89
-[; ;funtions_magic.c: 89:     }
-}
-[e :U 360 ]
-"91
-[; ;funtions_magic.c: 91: }
-[e :UE 357 ]
-}
-"95
-[; ;funtions_magic.c: 95: void readADC()
-[v _readADC `(v ~T0 @X0 1 ef ]
-"96
-[; ;funtions_magic.c: 96: {
-{
-[e :U _readADC ]
-[f ]
-"97
-[; ;funtions_magic.c: 97:     ADCON0bits.ADON = 1;
-[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-"99
-[; ;funtions_magic.c: 99:     ADCON1bits.ADCS = 0b001;
-[e = . . _ADCON1bits 1 2 -> -> 1 `i `uc ]
-"101
-[; ;funtions_magic.c: 101:     ADCON0bits.CHS = 0b00000;
-[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
-"103
-[; ;funtions_magic.c: 103:     ADCON1bits.ADFM = 1;
-[e = . . _ADCON1bits 0 7 -> -> 1 `i `uc ]
-"105
-[; ;funtions_magic.c: 105:     ADCON0bits.GO_nDONE = 1;
-[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
-"114
-[; ;funtions_magic.c: 114: }
-[e :UE 361 ]
-}
-"118
-[; ;funtions_magic.c: 118: void UART_write(char c)
-[v _UART_write `(v ~T0 @X0 1 ef1`uc ]
-"119
-[; ;funtions_magic.c: 119: {
-{
-[e :U _UART_write ]
-"118
-[; ;funtions_magic.c: 118: void UART_write(char c)
-[v _c `uc ~T0 @X0 1 r1 ]
-"119
-[; ;funtions_magic.c: 119: {
-[f ]
-"120
-[; ;funtions_magic.c: 120:     TXREG = c;
-[e = _TXREG -> _c `uc ]
-"121
-[; ;funtions_magic.c: 121:     while(TXSTAbits.TRMT == 0);
-[e $U 363  ]
-[e :U 364 ]
-[e :U 363 ]
-[e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 364  ]
-[e :U 365 ]
-"122
-[; ;funtions_magic.c: 122: }
-[e :UE 362 ]
-}
-"124
-[; ;funtions_magic.c: 124: void UART_print(unsigned char* cadena)
-[v _UART_print `(v ~T0 @X0 1 ef1`*uc ]
-"125
-[; ;funtions_magic.c: 125: {
-{
-[e :U _UART_print ]
-"124
-[; ;funtions_magic.c: 124: void UART_print(unsigned char* cadena)
-[v _cadena `*uc ~T0 @X0 1 r1 ]
-"125
-[; ;funtions_magic.c: 125: {
-[f ]
-"126
-[; ;funtions_magic.c: 126:     while(*cadena != 0)
-[e $U 367  ]
-[e :U 368 ]
-"127
-[; ;funtions_magic.c: 127:     {
-{
-"128
-[; ;funtions_magic.c: 128:         UART_write(*cadena);
-[e ( _UART_write (1 -> *U _cadena `uc ]
-"129
-[; ;funtions_magic.c: 129:         cadena++;
-[e ++ _cadena * -> -> 1 `i `x -> -> # *U _cadena `i `x ]
-"130
-[; ;funtions_magic.c: 130:     }
-}
-[e :U 367 ]
-"126
-[; ;funtions_magic.c: 126:     while(*cadena != 0)
-[e $ != -> *U _cadena `i -> 0 `i 368  ]
-[e :U 369 ]
-"131
-[; ;funtions_magic.c: 131: }
-[e :UE 366 ]
-}
-"133
-[; ;funtions_magic.c: 133: unsigned char* ASCII_Con(int a, int b, int c)
+"64
+[; ;funtions_magic.c: 64: unsigned char* ASCII_Con(int a, int b, int c)
 [v _ASCII_Con `(*uc ~T0 @X0 1 ef3`i`i`i ]
-"134
-[; ;funtions_magic.c: 134: {
+"65
+[; ;funtions_magic.c: 65: {
 {
 [e :U _ASCII_Con ]
-"133
-[; ;funtions_magic.c: 133: unsigned char* ASCII_Con(int a, int b, int c)
+"64
+[; ;funtions_magic.c: 64: unsigned char* ASCII_Con(int a, int b, int c)
 [v _a `i ~T0 @X0 1 r1 ]
 [v _b `i ~T0 @X0 1 r2 ]
 [v _c `i ~T0 @X0 1 r3 ]
-"134
-[; ;funtions_magic.c: 134: {
+"65
+[; ;funtions_magic.c: 65: {
 [f ]
-"135
-[; ;funtions_magic.c: 135:     static char r[7];
-[v F2520 `uc ~T0 @X0 -> 7 `i s r ]
-"136
-[; ;funtions_magic.c: 136:     r[0] = a+48;
-[e = *U + &U F2520 * -> -> -> 0 `i `ui `ux -> -> # *U &U F2520 `ui `ux -> + _a -> 48 `i `uc ]
-"137
-[; ;funtions_magic.c: 137:     r[1] = '.';
-[e = *U + &U F2520 * -> -> -> 1 `i `ui `ux -> -> # *U &U F2520 `ui `ux -> -> 46 `ui `uc ]
-"138
-[; ;funtions_magic.c: 138:     r[2] = b+48;
-[e = *U + &U F2520 * -> -> -> 2 `i `ui `ux -> -> # *U &U F2520 `ui `ux -> + _b -> 48 `i `uc ]
-"139
-[; ;funtions_magic.c: 139:     r[3] = c+48;
-[e = *U + &U F2520 * -> -> -> 3 `i `ui `ux -> -> # *U &U F2520 `ui `ux -> + _c -> 48 `i `uc ]
-"140
-[; ;funtions_magic.c: 140:     r[4] = ' ';
-[e = *U + &U F2520 * -> -> -> 4 `i `ui `ux -> -> # *U &U F2520 `ui `ux -> -> 32 `ui `uc ]
-"141
-[; ;funtions_magic.c: 141:     r[5] = 'V';
-[e = *U + &U F2520 * -> -> -> 5 `i `ui `ux -> -> # *U &U F2520 `ui `ux -> -> 86 `ui `uc ]
-"142
-[; ;funtions_magic.c: 142:     r[6] = '\0';
-[e = *U + &U F2520 * -> -> -> 6 `i `ui `ux -> -> # *U &U F2520 `ui `ux -> -> 0 `ui `uc ]
-"144
-[; ;funtions_magic.c: 144:     return r;
-[e ) -> &U F2520 `*uc ]
-[e $UE 370  ]
-"145
-[; ;funtions_magic.c: 145: }
-[e :UE 370 ]
+"66
+[; ;funtions_magic.c: 66:     static char r[7];
+[v F2503 `uc ~T0 @X0 -> 7 `i s r ]
+"67
+[; ;funtions_magic.c: 67:     r[0] = a+48;
+[e = *U + &U F2503 * -> -> -> 0 `i `ui `ux -> -> # *U &U F2503 `ui `ux -> + _a -> 48 `i `uc ]
+"68
+[; ;funtions_magic.c: 68:     r[1] = '.';
+[e = *U + &U F2503 * -> -> -> 1 `i `ui `ux -> -> # *U &U F2503 `ui `ux -> -> 46 `ui `uc ]
+"69
+[; ;funtions_magic.c: 69:     r[2] = b+48;
+[e = *U + &U F2503 * -> -> -> 2 `i `ui `ux -> -> # *U &U F2503 `ui `ux -> + _b -> 48 `i `uc ]
+"70
+[; ;funtions_magic.c: 70:     r[3] = c+48;
+[e = *U + &U F2503 * -> -> -> 3 `i `ui `ux -> -> # *U &U F2503 `ui `ux -> + _c -> 48 `i `uc ]
+"71
+[; ;funtions_magic.c: 71:     r[4] = ' ';
+[e = *U + &U F2503 * -> -> -> 4 `i `ui `ux -> -> # *U &U F2503 `ui `ux -> -> 32 `ui `uc ]
+"72
+[; ;funtions_magic.c: 72:     r[5] = 'V';
+[e = *U + &U F2503 * -> -> -> 5 `i `ui `ux -> -> # *U &U F2503 `ui `ux -> -> 86 `ui `uc ]
+"73
+[; ;funtions_magic.c: 73:     r[6] = '\0';
+[e = *U + &U F2503 * -> -> -> 6 `i `ui `ux -> -> # *U &U F2503 `ui `ux -> -> 0 `ui `uc ]
+"75
+[; ;funtions_magic.c: 75:     return r;
+[e ) -> &U F2503 `*uc ]
+[e $UE 364  ]
+"76
+[; ;funtions_magic.c: 76: }
+[e :UE 364 ]
 }

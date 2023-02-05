@@ -47,7 +47,7 @@ void init_IO(void)
     TRISBbits.TRISB7 = 0;
     
     //ADC
-    ADCON0bits.ADON = 0;
+    ADCON0bits.ADON = 0;        //Inicialmente mantenemos el ADC apagado
     FVRCONbits.FVREN = 1;       //Habilitamos el voltaje de referencia interno
     FVRCONbits.ADFVR = 0b11;    //Asignamos el voltaje de referencia a 4.096V
     ADCON1bits.ADNREF = 0;      //Asignamos el voltaje de referencia negativo a GND
@@ -56,10 +56,14 @@ void init_IO(void)
     PIR1bits.ADIF = 0;          //Nos aseguramos que este en 0 la bandera
     
     
+    //Wachdog timer
+    WDTCONbits.WDTPS = 0b01010;
+    
+    
     //Inicializamos el valor logico de las salidas
-    T1 = 1;
-    T2 = 1;
-    T3 = 1;
+    T1 = 0;
+    T2 = 0;
+    T3 = 0;
     ADis = 0;
     BDis = 0;
     CDis = 0;
@@ -68,8 +72,10 @@ void init_IO(void)
     FDis = 0;
     GDis = 0;
     
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    
     init_UART();                //Configuramos el UART
-    TMR0_INIT();
 }
 
 //Configuramos el UART
@@ -87,19 +93,4 @@ void init_UART(void)
     SPBRG = 25;                     //Transmicion a 9600 baudios
     RCSTAbits.SPEN = 1;             //Configuracion interna de pines
     
-}
-
-void TMR0_INIT(void){
-     
-     OPTION_REGbits.TMR0CS = 0;          //Modo Temporizador
-     OPTION_REGbits.PSA = 0;             //Prescaler habilitado
-     OPTION_REGbits.PS = 0b111;          //Prescaler 1:256
-     
-     INTCONbits.GIE = 1;
-     INTCONbits.PEIE = 1;
-     INTCONbits.TMR0IE = 1;
-     INTCONbits.TMR0IF = 0;
-   
-     TMR0 = 158;
-     //T0CONbits.TMR0ON = 1; //Enciende TMR0   
 }

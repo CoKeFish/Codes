@@ -137,6 +137,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "571
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 571: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
 [v _PIR1bits `VS37 ~T0 @X0 0 e@17 ]
+"1596
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1596:     struct {
+[s S88 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S88 . SWDTEN WDTPS0 WDTPS1 WDTPS2 WDTPS3 WDTPS4 ]
+"1604
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1604:     struct {
+[s S89 :1 `uc 1 :5 `uc 1 ]
+[n S89 . . WDTPS ]
+"1595
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1595: typedef union {
+[u S87 `S88 1 `S89 1 ]
+[n S87 . . . ]
+"1609
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1609: extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0x097)));
+[v _WDTCONbits `VS87 ~T0 @X0 0 e@151 ]
 "2046
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2046:     struct {
 [s S110 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -159,12 +174,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2114
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2114: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
 [v _LATBbits `VS111 ~T0 @X0 0 e@269 ]
-"9 ./init_IO.h
-[; ;./init_IO.h: 9: void init_UART(void);
+"358
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 358:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
+"368
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 368:     struct {
+[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S32 . . T0IF . T0IE ]
+"357
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 357: typedef union {
+[u S30 `S31 1 `S32 1 ]
+[n S30 . . . ]
+"375
+[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"8 ./init_IO.h
+[; ;./init_IO.h: 8: void init_UART(void);
 [v _init_UART `(v ~T0 @X0 0 ef ]
-"8
-[; ;./init_IO.h: 8: void TMR0_INIT(void);
-[v _TMR0_INIT `(v ~T0 @X0 0 ef ]
 "2848 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2848:     struct {
 [s S144 :1 `uc 1 ]
@@ -212,39 +239,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3329
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 3329: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x19D)));
 [v _RCSTAbits `VS179 ~T0 @X0 0 e@413 ]
-"1462
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1462:     struct {
-[s S83 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S83 . PS0 PS1 PS2 PSA TMR0SE TMR0CS INTEDG nWPUEN ]
-"1472
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1472:     struct {
-[s S84 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S84 . PS . T0SE T0CS ]
-"1461
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1461: typedef union {
-[u S82 `S83 1 `S84 1 ]
-[n S82 . . . ]
-"1479
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1479: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x095)));
-[v _OPTION_REGbits `VS82 ~T0 @X0 0 e@149 ]
-"358
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 358:     struct {
-[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-"368
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 368:     struct {
-[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S32 . . T0IF . T0IE ]
-"357
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 357: typedef union {
-[u S30 `S31 1 `S32 1 ]
-[n S30 . . . ]
-"375
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"733
-[; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 733: extern volatile unsigned char TMR0 __attribute__((address(0x015)));
-[v _TMR0 `Vuc ~T0 @X0 0 e@21 ]
 "55 D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -722,7 +716,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7 ./config.h
 [p x FOSC  =  INTOSC     ]
 "8
-[p x WDTE  =  OFF        ]
+[p x WDTE  =  ON        ]
 "9
 [p x PWRTE  =  OFF       ]
 "10
@@ -866,115 +860,87 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;init_IO.c: 56:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "60
-[; ;init_IO.c: 60:     LATAbits.LATA1 = 1;
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-"61
-[; ;init_IO.c: 61:     LATAbits.LATA2 = 1;
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-"62
-[; ;init_IO.c: 62:     LATAbits.LATA3 = 1;
-[e = . . _LATAbits 0 3 -> -> 1 `i `uc ]
-"63
-[; ;init_IO.c: 63:     LATAbits.LATA4 = 0;
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+[; ;init_IO.c: 60:     WDTCONbits.WDTPS = 0b01010;
+[e = . . _WDTCONbits 1 1 -> -> 10 `i `uc ]
 "64
-[; ;init_IO.c: 64:     LATAbits.LATA6 = 0;
-[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
+[; ;init_IO.c: 64:     LATAbits.LATA1 = 0;
+[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
 "65
-[; ;init_IO.c: 65:     LATAbits.LATA7 = 0;
-[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
+[; ;init_IO.c: 65:     LATAbits.LATA2 = 0;
+[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
 "66
-[; ;init_IO.c: 66:     LATBbits.LATB0 = 0;
-[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+[; ;init_IO.c: 66:     LATAbits.LATA3 = 0;
+[e = . . _LATAbits 0 3 -> -> 0 `i `uc ]
 "67
-[; ;init_IO.c: 67:     LATBbits.LATB3 = 0;
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[; ;init_IO.c: 67:     LATAbits.LATA4 = 0;
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 "68
-[; ;init_IO.c: 68:     LATBbits.LATB4 = 0;
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[; ;init_IO.c: 68:     LATAbits.LATA6 = 0;
+[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
 "69
-[; ;init_IO.c: 69:     LATBbits.LATB5 = 0;
-[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+[; ;init_IO.c: 69:     LATAbits.LATA7 = 0;
+[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
+"70
+[; ;init_IO.c: 70:     LATBbits.LATB0 = 0;
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
 "71
-[; ;init_IO.c: 71:     init_UART();
-[e ( _init_UART ..  ]
+[; ;init_IO.c: 71:     LATBbits.LATB3 = 0;
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
 "72
-[; ;init_IO.c: 72:     TMR0_INIT();
-[e ( _TMR0_INIT ..  ]
+[; ;init_IO.c: 72:     LATBbits.LATB4 = 0;
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
 "73
-[; ;init_IO.c: 73: }
+[; ;init_IO.c: 73:     LATBbits.LATB5 = 0;
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+"75
+[; ;init_IO.c: 75:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"76
+[; ;init_IO.c: 76:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"78
+[; ;init_IO.c: 78:     init_UART();
+[e ( _init_UART ..  ]
+"79
+[; ;init_IO.c: 79: }
 [e :UE 354 ]
 }
-"76
-[; ;init_IO.c: 76: void init_UART(void)
+"82
+[; ;init_IO.c: 82: void init_UART(void)
 [v _init_UART `(v ~T0 @X0 1 ef ]
-"77
-[; ;init_IO.c: 77: {
+"83
+[; ;init_IO.c: 83: {
 {
 [e :U _init_UART ]
 [f ]
-"78
-[; ;init_IO.c: 78:     APFCON1bits.TXCKSEL = 0;
-[e = . . _APFCON1bits 0 0 -> -> 0 `i `uc ]
-"79
-[; ;init_IO.c: 79:     TXSTAbits.TRMT = 1;
-[e = . . _TXSTAbits 0 1 -> -> 1 `i `uc ]
-"80
-[; ;init_IO.c: 80:     TXSTAbits.TXEN = 1;
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"81
-[; ;init_IO.c: 81:     BAUDCONbits.RCIDL = 1;
-[e = . . _BAUDCONbits 0 6 -> -> 1 `i `uc ]
 "84
-[; ;init_IO.c: 84:     TXSTAbits.SYNC = 0;
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;init_IO.c: 84:     APFCON1bits.TXCKSEL = 0;
+[e = . . _APFCON1bits 0 0 -> -> 0 `i `uc ]
 "85
-[; ;init_IO.c: 85:     TXSTAbits.TX9 = 0;
-[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;init_IO.c: 85:     TXSTAbits.TRMT = 1;
+[e = . . _TXSTAbits 0 1 -> -> 1 `i `uc ]
 "86
-[; ;init_IO.c: 86:     TXSTAbits.BRGH = 1;
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+[; ;init_IO.c: 86:     TXSTAbits.TXEN = 1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
 "87
-[; ;init_IO.c: 87:     SPBRG = 25;
-[e = _SPBRG -> -> 25 `i `uc ]
-"88
-[; ;init_IO.c: 88:     RCSTAbits.SPEN = 1;
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+[; ;init_IO.c: 87:     BAUDCONbits.RCIDL = 1;
+[e = . . _BAUDCONbits 0 6 -> -> 1 `i `uc ]
 "90
-[; ;init_IO.c: 90: }
-[e :UE 355 ]
-}
+[; ;init_IO.c: 90:     TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+"91
+[; ;init_IO.c: 91:     TXSTAbits.TX9 = 0;
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
 "92
-[; ;init_IO.c: 92: void TMR0_INIT(void){
-[v _TMR0_INIT `(v ~T0 @X0 1 ef ]
-{
-[e :U _TMR0_INIT ]
-[f ]
+[; ;init_IO.c: 92:     TXSTAbits.BRGH = 1;
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+"93
+[; ;init_IO.c: 93:     SPBRG = 25;
+[e = _SPBRG -> -> 25 `i `uc ]
 "94
-[; ;init_IO.c: 94:      OPTION_REGbits.TMR0CS = 0;
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-"95
-[; ;init_IO.c: 95:      OPTION_REGbits.PSA = 0;
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+[; ;init_IO.c: 94:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
 "96
-[; ;init_IO.c: 96:      OPTION_REGbits.PS = 0b111;
-[e = . . _OPTION_REGbits 1 0 -> -> 7 `i `uc ]
-"98
-[; ;init_IO.c: 98:      INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"99
-[; ;init_IO.c: 99:      INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"100
-[; ;init_IO.c: 100:      INTCONbits.TMR0IE = 1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"101
-[; ;init_IO.c: 101:      INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"103
-[; ;init_IO.c: 103:      TMR0 = 158;
-[e = _TMR0 -> -> 158 `i `uc ]
-"105
-[; ;init_IO.c: 105: }
-[e :UE 356 ]
+[; ;init_IO.c: 96: }
+[e :UE 355 ]
 }

@@ -4339,7 +4339,7 @@ extern __bank0 __bit __timeout;
 
 
 #pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
+#pragma config WDTE = ON
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF
@@ -4358,10 +4358,6 @@ extern __bank0 __bit __timeout;
 # 3 "funtions_magic.c" 2
 
 # 1 "./funtions_magic.h" 1
-
-void showNumber(int digit);
-void showNumbers(int *digits, int n);
-int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
 void readADC();
 void UART_write(char c);
@@ -4388,77 +4384,6 @@ int* BinTOBcd(long iADC)
 }
 
 
-
-int* seg7(const int * iBCD)
-{
-
-    int numbers[10] = {
-
-            0b1111110,
-            0b0110000,
-            0b1101101,
-            0b1111001,
-            0b0110011,
-            0b1011011,
-            0b1011111,
-            0b1110000,
-            0b1111111,
-            0b1111011,
-    };
-
-    static int r[3];
-    r[0] = numbers[iBCD[0]];
-    r[1] = numbers[iBCD[1]];
-    r[2] = numbers[iBCD[2]];
-
-    return r;
-
-}
-
-
-
-void showNumber(int digit)
-{
-    LATAbits.LATA4 = !!(digit & (1<<6));
-    LATAbits.LATA6 = !!(digit & (1<<5));
-    LATAbits.LATA7 = !!(digit & (1<<4));
-    LATBbits.LATB0 = !!(digit & (1<<3));
-    LATBbits.LATB3 = !!(digit & (1<<2));
-    LATBbits.LATB4 = !!(digit & (1<<1));
-    LATBbits.LATB5 = digit & 1;
-}
-
-
-
-
-void showNumbers(int *digits, int n)
-{
-
-
-
-    if(n%3 == 0)
-    {
-        showNumber(digits[0]);
-        LATAbits.LATA3 = 0;
-        LATAbits.LATA1 = 1;
-    }
-    if(n%3 == 1)
-    {
-        showNumber(digits[1]);
-        LATAbits.LATA2 = 0;
-        LATAbits.LATA3 = 1;
-    }
-    if(n%3 == 2)
-    {
-        showNumber(digits[2]);
-        LATAbits.LATA1 = 0;
-        LATAbits.LATA2 = 1;
-    }
-
-}
-
-
-
 void readADC()
 {
     ADCON0bits.ADON = 1;
@@ -4470,7 +4395,7 @@ void readADC()
     ADCON1bits.ADFM = 1;
 
     ADCON0bits.GO_nDONE = 1;
-# 114 "funtions_magic.c"
+# 43 "funtions_magic.c"
 }
 
 
@@ -4488,6 +4413,8 @@ void UART_print(unsigned char* cadena)
         UART_write(*cadena);
         cadena++;
     }
+    WDTCONbits.WDTPS = 0b01010;
+    __asm("sleep");
 }
 
 unsigned char* ASCII_Con(int a, int b, int c)

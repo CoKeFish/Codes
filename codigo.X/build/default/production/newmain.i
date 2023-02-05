@@ -4346,7 +4346,7 @@ extern __bank0 __bit __timeout;
 
 
 #pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
+#pragma config WDTE = ON
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF
@@ -4365,10 +4365,6 @@ extern __bank0 __bit __timeout;
 # 10 "newmain.c" 2
 
 # 1 "./funtions_magic.h" 1
-
-void showNumber(int digit);
-void showNumbers(int *digits, int n);
-int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
 void readADC();
 void UART_write(char c);
@@ -4388,7 +4384,7 @@ unsigned char* ASCII_Con(int a, int b, int c);
 
 
 #pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
+#pragma config WDTE = ON
 #pragma config PWRTE = OFF
 #pragma config MCLRE = ON
 #pragma config CP = OFF
@@ -4407,10 +4403,6 @@ unsigned char* ASCII_Con(int a, int b, int c);
 # 4 "./init_IO.h" 2
 
 # 1 "./funtions_magic.h" 1
-
-void showNumber(int digit);
-void showNumbers(int *digits, int n);
-int* seg7(const int * iBCD);
 int* BinTOBcd(long iADC);
 void readADC();
 void UART_write(char c);
@@ -4420,7 +4412,6 @@ unsigned char* ASCII_Con(int a, int b, int c);
 
 
 void init_IO(void);
-void TMR0_INIT(void);
 void init_UART(void);
 # 12 "newmain.c" 2
 
@@ -4433,7 +4424,7 @@ void main(void) {
 
     while(1)
     {
-
+        readADC();
 
     }
 
@@ -4442,33 +4433,16 @@ void main(void) {
 
 void __attribute__((picinterrupt(("")))) INT_TMR0(void){
 
-    static int count = 0;
-    static int* A ;
 
-    if(INTCONbits.TMR0IF == 1){
-        if(count == 40)
-        {
-            LATAbits.LATA4 = ! LATAbits.LATA4;
-            readADC();
-            count = 0;
-        }
 
-        count++;
-        TMR0 = 158;
-        INTCONbits.TMR0IF = 0;
-        showNumbers(A, count);
-        return;
-    }
     if(PIR1bits.ADIF == 1){
 
-        LATAbits.LATA6 = ! LATAbits.LATA6;
         PIR1bits.ADIF = 0;
         ADCON0bits.ADON = 0;
 
         int *B = BinTOBcd(((ADRESH<<8) + ADRESL));
 
 
-        A = seg7(B);
         UART_print(ASCII_Con(B[2], B[1], B[0]));
         return;
     }
