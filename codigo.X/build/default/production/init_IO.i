@@ -4360,16 +4360,43 @@ extern __bank0 __bit __timeout;
 #pragma config LVP = ON
 # 4 "./init_IO.h" 2
 
-# 1 "./funtions_magic.h" 1
+# 1 "./funtions.h" 1
 
-void showNumber(int digit);
-void showNumbers(int *digits);
-int* seg7(const int * iBCD);
+
+
+
+
+void showNumber(unsigned short digit);
+# 16 "./funtions.h"
+void showNumbers(unsigned short *digits);
+# 25 "./funtions.h"
+unsigned short * seg7(const unsigned short *iBCD);
+# 34 "./funtions.h"
 int* BinTOBcd(long iADC);
+
+
+
+
+
 long readADC();
+
+
+
+
 void init_UART();
-void UART_write(char c);
+
+
+
+
+
+void UART_write(unsigned char c);
+
+
+
+
+
 void UART_print(unsigned char* cadena);
+# 67 "./funtions.h"
 unsigned char* ASCII_Con(int a, int b, int c);
 # 5 "./init_IO.h" 2
 

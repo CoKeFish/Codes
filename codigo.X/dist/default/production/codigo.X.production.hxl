@@ -9,11 +9,11 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 7h		(dist/default/production\codigo.X.production.hex)
-  7A0h - FFFh		(dist/default/production\codigo.X.production.hex)
+  7A6h - FFFh		(dist/default/production\codigo.X.production.hex)
   10000h - 10007h		(dist/default/production\codigo.X.production.hex)
   1000Eh - 10011h		(dist/default/production\codigo.X.production.hex)
  Unused ranges:
-  8h - 79Fh
+  8h - 7A5h
   1000h - FFFFh
   10008h - 1000Dh
 
@@ -26,7 +26,7 @@
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
-000007A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000007A0 | -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000007B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000007C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000007D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

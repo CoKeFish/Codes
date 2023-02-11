@@ -1,4 +1,4 @@
-# 1 "newmain.c"
+# 1 "main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "newmain.c" 2
+# 1 "main.c" 2
 
 
 
@@ -4336,7 +4336,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 9 "newmain.c" 2
+# 9 "main.c" 2
 
 # 1 "./config.h" 1
 
@@ -4362,20 +4362,47 @@ extern __bank0 __bit __timeout;
 #pragma config STVREN = ON
 #pragma config BORV = LO
 #pragma config LVP = ON
-# 10 "newmain.c" 2
+# 10 "main.c" 2
 
-# 1 "./funtions_magic.h" 1
+# 1 "./funtions.h" 1
 
-void showNumber(int digit);
-void showNumbers(int *digits);
-int* seg7(const int * iBCD);
+
+
+
+
+void showNumber(unsigned short digit);
+# 16 "./funtions.h"
+void showNumbers(unsigned short *digits);
+# 25 "./funtions.h"
+unsigned short * seg7(const unsigned short *iBCD);
+# 34 "./funtions.h"
 int* BinTOBcd(long iADC);
+
+
+
+
+
 long readADC();
+
+
+
+
 void init_UART();
-void UART_write(char c);
+
+
+
+
+
+void UART_write(unsigned char c);
+
+
+
+
+
 void UART_print(unsigned char* cadena);
+# 67 "./funtions.h"
 unsigned char* ASCII_Con(int a, int b, int c);
-# 11 "newmain.c" 2
+# 11 "main.c" 2
 
 # 1 "./init_IO.h" 1
 
@@ -4407,22 +4434,49 @@ unsigned char* ASCII_Con(int a, int b, int c);
 #pragma config LVP = ON
 # 4 "./init_IO.h" 2
 
-# 1 "./funtions_magic.h" 1
+# 1 "./funtions.h" 1
 
-void showNumber(int digit);
-void showNumbers(int *digits);
-int* seg7(const int * iBCD);
+
+
+
+
+void showNumber(unsigned short digit);
+# 16 "./funtions.h"
+void showNumbers(unsigned short *digits);
+# 25 "./funtions.h"
+unsigned short * seg7(const unsigned short *iBCD);
+# 34 "./funtions.h"
 int* BinTOBcd(long iADC);
+
+
+
+
+
 long readADC();
+
+
+
+
 void init_UART();
-void UART_write(char c);
+
+
+
+
+
+void UART_write(unsigned char c);
+
+
+
+
+
 void UART_print(unsigned char* cadena);
+# 67 "./funtions.h"
 unsigned char* ASCII_Con(int a, int b, int c);
 # 5 "./init_IO.h" 2
 
 
 void init_IO();
-# 12 "newmain.c" 2
+# 12 "main.c" 2
 
 
 

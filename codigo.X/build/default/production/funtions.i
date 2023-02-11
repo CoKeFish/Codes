@@ -1,4 +1,4 @@
-# 1 "funtions_magic.c"
+# 1 "funtions.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "funtions_magic.c" 2
-
+# 1 "funtions.c" 2
 # 1 "D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4329,7 +4328,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "D:/Program Files/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 2 "funtions_magic.c" 2
+# 1 "funtions.c" 2
 
 # 1 "./config.h" 1
 
@@ -4355,45 +4354,62 @@ extern __bank0 __bit __timeout;
 #pragma config STVREN = ON
 #pragma config BORV = LO
 #pragma config LVP = ON
-# 3 "funtions_magic.c" 2
+# 2 "funtions.c" 2
 
-# 1 "./funtions_magic.h" 1
+# 1 "./funtions.h" 1
 
-void showNumber(int digit);
-void showNumbers(int *digits);
-int* seg7(const int * iBCD);
+
+
+
+
+void showNumber(unsigned short digit);
+# 16 "./funtions.h"
+void showNumbers(unsigned short *digits);
+# 25 "./funtions.h"
+unsigned short * seg7(const unsigned short *iBCD);
+# 34 "./funtions.h"
 int* BinTOBcd(long iADC);
+
+
+
+
+
 long readADC();
+
+
+
+
 void init_UART();
-void UART_write(char c);
+
+
+
+
+
+void UART_write(unsigned char c);
+
+
+
+
+
 void UART_print(unsigned char* cadena);
+# 67 "./funtions.h"
 unsigned char* ASCII_Con(int a, int b, int c);
-# 4 "funtions_magic.c" 2
-
-
-
-
-
-
-
-int* BinTOBcd(long iADC)
-{
+# 3 "funtions.c" 2
+# 12 "funtions.c"
+int *BinTOBcd(long iADC) {
 
     static int r[3];
-    r[0] = ((iADC*1000)/1024)%10;
-    r[1] = (((iADC*1000)/1024)/10)%10;
-    r[2] = (((iADC*1000)/1024)/10)/10;
+    r[0] = ((iADC * 1000) / 1024) % 10;
+    r[1] = (((iADC * 1000) / 1024) / 10) % 10;
+    r[2] = (((iADC * 1000) / 1024) / 10) / 10;
 
     return r;
 
 }
+# 30 "funtions.c"
+unsigned short *seg7(const unsigned short *iBCD) {
 
-
-
-int* seg7(const int * iBCD)
-{
-
-    int numbers[10] = {
+    unsigned short numbers[10] = {
 
             0b1111110,
             0b0110000,
@@ -4407,7 +4423,7 @@ int* seg7(const int * iBCD)
             0b1111011,
     };
 
-    static int r[3];
+    static unsigned short r[3];
     r[0] = numbers[iBCD[0]];
     r[1] = numbers[iBCD[1]];
     r[2] = numbers[iBCD[2]];
@@ -4418,45 +4434,44 @@ int* seg7(const int * iBCD)
 
 
 
-void showNumber(int digit)
-{
-    LATAbits.LATA4 = !!(digit & (1<<6));
-    LATAbits.LATA6 = !!(digit & (1<<5));
-    LATAbits.LATA7 = !!(digit & (1<<4));
-    LATBbits.LATB0 = !!(digit & (1<<3));
-    LATBbits.LATB3 = !!(digit & (1<<2));
-    LATBbits.LATB4 = !!(digit & (1<<1));
+
+
+
+void showNumber(unsigned short digit) {
+    LATAbits.LATA4 = !!(digit & (1 << 6));
+    LATAbits.LATA6 = !!(digit & (1 << 5));
+    LATAbits.LATA7 = !!(digit & (1 << 4));
+    LATBbits.LATB0 = !!(digit & (1 << 3));
+    LATBbits.LATB3 = !!(digit & (1 << 2));
+    LATBbits.LATB4 = !!(digit & (1 << 1));
     LATBbits.LATB5 = digit & 1;
 }
-
-
-
-
-void showNumbers(int *digits)
-{
-    for(int i = 0; i < 10; i++)
-    {
+# 79 "funtions.c"
+void showNumbers(unsigned short *digits) {
+    for (int i = 0; i < 10; i++) {
         showNumber(digits[0]);
-        LATAbits.LATA3 = 0;
-        _delay((unsigned long)((33)*(4000000/4000.0)));
         LATAbits.LATA3 = 1;
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        LATAbits.LATA3 = 0;
 
         showNumber(digits[1]);
-        LATAbits.LATA2 = 0;
-        _delay((unsigned long)((33)*(4000000/4000.0)));
         LATAbits.LATA2 = 1;
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        LATAbits.LATA2 = 0;
 
         showNumber(digits[2]);
-        LATAbits.LATA1 = 0;
-        _delay((unsigned long)((33)*(4000000/4000.0)));
         LATAbits.LATA1 = 1;
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+        LATAbits.LATA1 = 0;
     }
 }
 
 
 
-long readADC()
-{
+
+
+
+long readADC() {
     ADCON0bits.ADON = 1;
 
     ADCON1bits.ADCS = 0b001;
@@ -4467,16 +4482,17 @@ long readADC()
 
     ADCON0bits.GO_nDONE = 1;
 
-    while(ADCON0bits.GO_nDONE);
+    while (ADCON0bits.GO_nDONE);
 
-    long r = (ADRESH<<8) + ADRESL;
+    long r = (ADRESH << 8) + ADRESL;
     return r;
 
 }
 
 
-void init_UART()
-{
+
+
+void init_UART() {
     APFCON1bits.TXCKSEL = 0;
     TXSTAbits.TRMT = 1;
     TXSTAbits.TXEN = 1;
@@ -4491,28 +4507,32 @@ void init_UART()
 
 }
 
-void UART_write(char c)
-{
+
+
+
+
+void UART_write(unsigned char c) {
     TXREG = c;
-    while(TXSTAbits.TRMT == 0);
+    while (TXSTAbits.TRMT == 0);
 }
 
-void UART_print(unsigned char* cadena)
-{
-    while(*cadena != 0)
-    {
+
+
+
+
+void UART_print(unsigned char *cadena) {
+    while (*cadena != 0) {
         UART_write(*cadena);
         cadena++;
     }
 }
-
-unsigned char* ASCII_Con(int a, int b, int c)
-{
-    static char r[7];
-    r[0] = a+48;
+# 167 "funtions.c"
+unsigned char *ASCII_Con(int a, int b, int c) {
+    static unsigned char r[7];
+    r[0] = a + 48;
     r[1] = '.';
-    r[2] = b+48;
-    r[3] = c+48;
+    r[2] = b + 48;
+    r[3] = c + 48;
     r[4] = ' ';
     r[5] = 'V';
     r[6] = '\0';
