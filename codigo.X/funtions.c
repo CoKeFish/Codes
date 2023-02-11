@@ -1,6 +1,6 @@
 #include <xc.h>
 #include "config.h"
-#include "funtions_magic.h"
+#include "funtions.h"
 
 /**
  * Se encarga de interpretar el valor obtenido del ADC a BCD
