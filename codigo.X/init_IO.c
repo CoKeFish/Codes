@@ -49,6 +49,10 @@ void init_IO()
     //ADC
     FVRCONbits.FVREN = 1;       //Habilitamos el voltaje de referencia interno
     FVRCONbits.ADFVR = 0b11;    //Asignamos el voltaje de referencia a 4.096V
+
+    ADCON1bits.ADCS = 0b001;    //Seleccionamos el reloj de convercion
+    ADCON0bits.CHS = 0b00000;   //Seleccionamos el canal
+    ADCON1bits.ADFM = 1;        //Queremos el resultado con justificacion derecha
     ADCON1bits.ADNREF = 0;      //Asignamos el voltaje de referencia negativo a GND
     ADCON1bits.ADPREF = 0b11;   //Asignamos el voltaje de referencia positivo al voltaje de referencia interno
     

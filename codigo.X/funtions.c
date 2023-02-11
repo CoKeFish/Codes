@@ -101,19 +101,14 @@ void showNumbers(unsigned short *digits) {
  * @return la lectura obtenida del ADC
  */
 long readADC() {
-    ADCON0bits.ADON = 1;        //Habilitamos el ADC
+    ADCON0bits.ADON = 1;                //Habilitamos el ADC
 
-    ADCON1bits.ADCS = 0b001;    //Seleccionamos el reloj de convercion
+    ADCON0bits.GO_nDONE = 1;            //Iniciamos la convercion
 
-    ADCON0bits.CHS = 0b00000;   //Seleccionamos el canal
+    while (ADCON0bits.GO_nDONE);        //Esperamos a que termine la convercion
 
-    ADCON1bits.ADFM = 1;        //Queremos el resultado con justificacion derecha
-
-    ADCON0bits.GO_nDONE = 1;    //Iniciamos la convercion
-
-    while (ADCON0bits.GO_nDONE); //Esperamos a que termine la convercion
-
-    long r = (ADRESH << 8) + ADRESL;  //Concatenamos los valores de los registros
+    long r = (ADRESH << 8) + ADRESL;    //Concatenamos los valores de los registros
+    ADCON0bits.ADON = 0;                //Desabilitamos el ADC
     return r;
 
 }
@@ -137,8 +132,8 @@ void init_UART() {
 }
 
 /**
- * Trasmite un caracter por TX
- * @param c valor a trasmitir
+ * Trasmite un caracter por el pin TX
+ * @param c caracter a trasmitir
  */
 void UART_write(unsigned char c) {
     TXREG = c;
